@@ -1,0 +1,171 @@
+    1  pwd
+    2  yum -y update
+    3  yum install net-tools
+    4  ifconfig 
+    5  ping 127.0.0.1
+    6  yum update openssh-server
+    7  yum update openssh-client
+    8  ssh
+    9  yum -y install openssh-server openssh-clients
+   10  netstat -tulpn | grep :22
+   11  netstat -tulpn | grep :8080
+   12  netstat -tulpn | grep :7080
+   13  ufw 
+   14  yum install ufw
+   15  yum install iptables
+   16  yum install ufw
+   17  yum install epel release
+   18  yum install epel-releas
+   19  yum install ufw
+   20  yum install httpd -y
+   21  cd /var/
+   22  ls
+   23  cd www/html/
+   24  ls
+   25  cat > index.html
+   26  ls
+   27  clear
+   28  service httpd
+   29  service httpd status
+   30  service httpd start
+   31  service httpd status
+   32  yum remove iptables
+   33  ufw enable
+   34  yum install ufw
+   35  ufw enable
+   36  ufw allow 80
+   37  ufw allow 22
+   38  [root@localhost srinivas]# yum install httpd -y
+   39  Loaded plugins: fastestmirror
+   40  Loading mirror speeds from cached hostfile
+   41   * base: mirrors.fibergrid.in
+   42   * epel: mirror01.idc.hinet.net
+   43   * extras: centos-hcm.viettelidc.com.vn
+   44   * updates: centos-hcm.viettelidc.com.vn
+   45  Resolving Dependencies
+   46  --> Running transaction check
+   47  ---> Package httpd.x86_64 0:2.4.6-80.el7.centos.1 will be installed
+   48  --> Processing Dependency: httpd-tools = 2.4.6-80.el7.centos.1 for package: httpd-2.4.6-80.el7.centos.1.x86_64
+   49  --> Processing Dependency: /etc/mime.types for package: httpd-2.4.6-80.el7.centos.1.x86_64
+   50  --> Processing Dependency: libaprutil-1.so.0()(64bit) for package: httpd-2.4.6-80.el7.centos.1.x86_64
+   51  --> Processing Dependency: libapr-1.so.0()(64bit) for package: httpd-2.4.6-80.el7.centos.1.x86_64
+   52  --> Running transaction check
+   53  ---> Package apr.x86_64 0:1.4.8-3.el7_4.1 will be installed
+   54  ---> Package apr-util.x86_64 0:1.5.2-6.el7 will be installed
+   55  ---> Package httpd-tools.x86_64 0:2.4.6-80.el7.centos.1 will be installed
+   56  ---> Package mailcap.noarch 0:2.1.41-2.el7 will be installed
+   57  --> Finished Dependency Resolution
+   58  Dependencies Resolved
+   59  =========================================================================================
+   60   Package             Arch           Version                        Repository       Size
+   61  =========================================================================================
+   62  Installing:
+   63   httpd               x86_64         2.4.6-80.el7.centos.1          updates         2.7 M
+   64  Installing for dependencies:
+   65   apr                 x86_64         1.4.8-3.el7_4.1                base            103 k
+   66   apr-util            x86_64         1.5.2-6.el7                    base             92 k
+   67   httpd-tools         x86_64         2.4.6-80.el7.centos.1          updates          90 k
+   68   mailcap             noarch         2.1.41-2.el7                   base             31 k
+   69  Transaction Summary
+   70  =========================================================================================
+   71  Install  1 Package (+4 Dependent packages)
+   72  Total download size: 3.0 M
+   73  Installed size: 10 M
+   74  Downloading packages:
+   75  (1/5): apr-1.4.8-3.el7_4.1.x86_64.rpm                             | 103 kB  00:00:06
+   76  (2/5): apr-util-1.5.2-6.el7.x86_64.rpm                            |  92 kB  00:00:06
+   77  (3/5): httpd-tools-2.4.6-80.el7.centos.1.x86_64.rpm               |  90 kB  00:00:06
+   78  (4/5): mailcap-2.1.41-2.el7.noarch.rpm                            |  31 kB  00:00:00
+   79  httpd-2.4.6-80.el7.centos.1.x8 FAILED                                          15:00 ETA
+   80  http://mirror.vbctv.in/centos/7.5.1804/updates/x86_64/Packages/httpd-2.4.6-80.el7.centos.1.x86_64.rpm: [Errno 12] Timeout on http://mirror.vbctv.in/centos/7.5.1804/updates/x86_64/Packages/httpd-2.4.6-80.el7.centos.1.x86_64.rpm: (28, 'Operation too slow. Less than 1000 bytes/sec transferred the last 30 seconds')
+   81  Trying other mirror.
+   82  (5/5): httpd-2.4.6-80.el7.centos.1.x86_64.rpm                     | 2.7 MB  00:00:36
+   83  -----------------------------------------------------------------------------------------
+   84  Total                                                        24 kB/s | 3.0 MB  02:07
+   85  Running transaction check
+   86  Running transaction test
+   87  Transaction test succeeded
+   88  Running transaction
+   89    Installing : apr-1.4.8-3.el7_4.1.x86_64                                            1/5
+   90    Installing : apr-util-1.5.2-6.el7.x86_64                                           2/5
+   91    Installing : httpd-tools-2.4.6-80.el7.centos.1.x86_64                              3/5
+   92    Installing : mailcap-2.1.41-2.el7.noarch                                           4/5
+   93    Installing : httpd-2.4.6-80.el7.centos.1.x86_64                                    5/5
+   94    Verifying  : mailcap-2.1.41-2.el7.noarch                                           1/5
+   95    Verifying  : httpd-tools-2.4.6-80.el7.centos.1.x86_64                              2/5
+   96    Verifying  : apr-util-1.5.2-6.el7.x86_64                                           3/5
+   97    Verifying  : apr-1.4.8-3.el7_4.1.x86_64                                            4/5
+   98    Verifying  : httpd-2.4.6-80.el7.centos.1.x86_64                                    5/5
+   99  [root@localhost htm
+  100  The service command supports 
+  101  [root@localhost html]# service httpd statu
+  102  mkdir -p srinivas/{ram,srin{1,2{hello,Hai}}}
+  103  yum install tree
+  104  tree srinivas
+  105  tree /
+  106  pwd
+  107  tree
+  108  tree /var/
+  109  tree /var/www
+  110  tree /var/www/html/srinivas/
+  111  useradd srinu -d /home/srinu
+  112  vim /etc/passwd
+  113  yum install vim
+  114  vim /etc/passwd
+  115  passwd srinu
+  116  su srinu
+  117  useradd ramu -u 1223 -g 1001 -d /home/ramu
+  118  useradd hariramu -c Hari -u 2223 -g 1001 -d /home/ramu -s /bin/bash
+  119  useradd hariramu -c Hari -u 2223 -g 1001 -d /home/harramu -s /bin/bash
+  120  cd /home/
+  121  ls
+  122  vim /etc/passwd
+  123  useradd harira -c Hari -u 2223 -g 1001 -d /home/harira -s /bin/bash
+  124  useradd harira -c Hari -u 3223 -g 1001 -d /home/harira -s /bin/bash
+  125  vim /etc/passwd
+  126  cut d: -f1 /etc/passwd
+  127  cut -d: -f1 /etc/passwd
+  128  cut -d: -f2 /etc/passwd
+  129  cut -d: -f1 /etc/tc/passwd
+  130  clear 
+  131  tail -f 3 /etc/passwd
+  132  tail -f 3 /etc/group
+  133  useradd harirath -c Hari -u 4223 -G 1001 -d /home/harirath -s /bin/bash
+  134  tail -f 3 /etc/group
+  135  srinu -l
+  136  usermod srinu -l
+  137  usermod -l srinu
+  138  usermod -l srinu123 srinu 
+  139  su srinu123
+  140  su srinu
+  141  usermod -L srinu123  
+  142  su srinu123
+  143  su harira
+  144  usermod -U srinu123
+  145  su harira
+  146  su srinu123
+  147  passwd srinu123
+  148  usermod -U srinu123
+  149  su harira
+  150  usermod -L srinu123
+  151  su harira
+  152  usermod -U srinu123
+  153  su harira
+  154  chage srinu123
+  155  tail -f /etc/passwd
+  156  useradd sasi -G 1001 -g 1223 -u 700 -d /home/sasi -s /bin/bash
+  157  useradd sasi -G 1001 -g 2223 -u 700 -d /home/sasi -s /bin/bash
+  158  useradd sasi -G 1001 -u 700 -d /home/sasi -s /bin/bash
+  159  useradd sasina -G 1001 -u 701 -d /home/sasina -s /bin/bash -c thisisgood
+  160  tail -f /etc/passwd
+  161  tail -f /etc/shadow
+  162  tail -f /etc/group
+  163  useradd sina -G 1001 -g 4225 -u 710 -d /home/sina -s /bin/bash -c thisisgood
+  164  tail -f /etc/group
+  165  tail -f /etc/passwd
+  166  groupadd raju 
+  167  tail -f /etc/group
+  168  groupadd rammmm -g 3333
+  169  tail -f /etc/group
+  170  history
+  171  history > devopspracticelinuc.txt
